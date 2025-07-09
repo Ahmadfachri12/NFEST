@@ -5,7 +5,7 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
-
+use App\Http\Middleware\IsAdmin;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,8 +14,6 @@ use App\Http\Controllers\EventController;
 
 // Default login page
 Route::get('/', fn() => view('auth.login'));
-//events cui
-
 
 
 // Setelah login berdasarkan role
@@ -34,7 +32,7 @@ Route::post('/register', [RegisteredUserController::class, 'store']);
 // ✅ Hanya untuk admin (group pakai 'admin' + 'auth' middleware)
 Route::middleware(['auth', \App\Http\Middleware\AdminOnly::class])->group(function () {
 
-    Route::get('/dashboard', fn() => view('dashboard.index'))->name('dashboard.index');
+    Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard.index');
     Route::get('/admin', [AdminController::class, 'index']);
 
     // Events
@@ -51,14 +49,12 @@ Route::middleware(['auth', \App\Http\Middleware\AdminOnly::class])->group(functi
 
     // Users
     Route::prefix('dashboard/users')->name('users.')->group(function () {
-        Route::get('/', [UserController::class, 'index'])->name('index');
-        Route::get('/create', [UserController::class, 'create'])->name('create');
-        Route::post('/store', [UserController::class, 'store'])->name('store');
+         Route::get('/', [UserController::class, 'index'])->name('index');
         Route::get('/show/{id}', [UserController::class, 'show'])->name('show');
-        Route::get('/edit/{id}', [UserController::class, 'edit'])->name('edit');
-        Route::put('/update/{id}', [UserController::class, 'update'])->name('update');
-        Route::delete('/destroy/{id}', [UserController::class, 'destroy'])->name('destroy');
+
     });
+
+
 
 });
 

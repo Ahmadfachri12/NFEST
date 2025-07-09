@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>Antri Klinik - Black Cassava</title>
+    <title>NFEST</title>
     <!-- Favicon -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
 
-    <link rel="shortcut icon" href="{{ asset('admin/images/logo.png')}}">
+    <link rel="shortcut icon" href="{{ asset('assets/img/NFest-logo.png')}}">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{ asset('admin/css/bootstrap.min.css')}}">
     <!-- file upload -->
@@ -99,6 +99,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     
     

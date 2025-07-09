@@ -53,6 +53,11 @@
           <li><a href="{{ route('main') }}">Home<br></a></li>
           <li><a href="{{ route('about') }}">About</a></li>
           <li><a href="{{ route('events')}}"class="active">Events</a></li>
+          @auth
+            @if(Auth::user()->role === 'admin')
+                <li><a href="{{ route('dashboard.index') }}">Dashboard</a></li>
+            @endif
+        @endauth
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -92,10 +97,9 @@
       
       <!-- Kiri: Teks dan ikon -->
       <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-        <h2 data-aos="fade-up">Ayo Ikuti Events Yang seru</h2>
-        <p data-aos="fade-up" data-aos-delay="100">
-          Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit
-        </p>
+        <h2 data-aos="fade-up">Jadilah Bagian dari Perubahan!</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Temukan berbagai event menarik dari UKM, ORMAWA, hingga organisasi eksternal! Jangan lewatkan kesempatan untuk berkembang, berkarya, dan bertemu teman-teman baru. Setiap langkah kecilmu hari ini bisa jadi awal dari masa depan yang gemilang.</p>
+        
 
         <!-- Ikon-ikon -->
         
@@ -165,13 +169,16 @@
       <div class="container section-title" data-aos="fade-up">
         <span>PAST EVENTS<br></span>
         <h2>Daftar Events</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Bergabung & jadilah bagian dari event inspiratif ini!</p>
       </div>
+      
       <!-- tombol filter events -->
       <div class="text-center mb-4">
         <a href="{{ route('events', ['category' => 'ALL']) }}" class="btn btn-outline-primary {{ (request('category') == 'ALL' || !request('category')) ? 'active' : '' }}">All</a>
         <a href="{{ route('events', ['category' => 'ORMAWA']) }}" class="btn btn-outline-primary {{ request('category') == 'ORMAWA' ? 'active' : '' }}">ORMAWA</a>
         <a href="{{ route('events', ['category' => 'UKM']) }}" class="btn btn-outline-primary {{ request('category') == 'UKM' ? 'active' : '' }}">UKM</a>
+        <a href="{{ route('events', ['category' => 'EKSTERNAL']) }}" class="btn btn-outline-primary {{ request('category') == 'EKSTERNAL' ? 'active' : '' }}">EKSTERNAL</a>
+
     </div>
 
 
@@ -210,62 +217,40 @@
           <a href="index.html" class="logo d-flex align-items-center">
             <span class="sitename">NFEST</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>Platform informasi event kampus STT Terpadu Nurul Fikri yang bertujuan memudahkanmahasiswa 
+              menemukan, mendaftar, dan mengikuti berbagai kegiatan kampus secara terpusat dan efisien.
+          </p>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            
           </div>
         </div>
 
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
+        <div class="col-lg-4 col-md-6 footer-links">
+          <h4>Sosial Media Kami</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href=""><i class="bi bi-twitter-x"></i>   Twitter</a></li>
+            <li><a href=""><i class="bi bi-facebook"></i>   Facebook</a></li>
+            <li><a href=""><i class="bi bi-instagram"></i>   Instagram</a></li>
+            <li> <a href=""><i class="bi bi-linkedin"></i>   Linkedin</a></li>
           </ul>
         </div>
 
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Daftar Events</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
+          <h4>Kantor Pusat Kami</h4>
+          <p><i class="bi bi-geo-alt-fill me-2"></i>Jl. Setu Indah No.116, Kec. Cimanggis, Kota Depok, Provinsi Jawa Barat, Kode Pos 16451</p>
+          <p class="mt-4"><i class="bi bi-telephone-fill me-2"></i>(+62) 89821234567</p>
         </div>
 
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Logis</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon
+      <p><div class="credits">© Copyright 2025<a href="https://www.instagram.com/paprikahive_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="> paprikahive_</a></p>
       </div>
     </div>
 
   </footer>
-
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

@@ -23,7 +23,13 @@
 
                 <div class="mb-3">
                     <label for="category" class="form-label">Kategori</label>
-                    <input type="text" name="category" id="category" class="form-control" required value="{{ old('category') }}">
+                    <select name="category" id="category" class="form-control" required>
+                        <option value="">-- Pilih Kategori --</option>
+                        <option value="UKM" {{ old('category') == 'UKM' ? 'selected' : '' }}>UKM</option>
+                        <option value="ORMAWA" {{ old('category') == 'ORMAWA' ? 'selected' : '' }}>ORMAWA</option>
+                        <option value="EKSTERNAL" {{ old('category') == 'EKSTERNAL' ? 'selected' : '' }}>EKSTERNAL</option>
+                    </select>
+
                 </div>
 
                 <div class="mb-3">

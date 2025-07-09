@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('image'); // path gambar event
-            $table->enum('category', ['ORMAWA', 'UKM']);
+            $table->enum('category', ['ORMAWA', 'UKM', 'EKSTERNAL']);
             $table->dateTime('schedule');
             $table->string('location');
             $table->string('registration_link')->nullable(); // link pendaftaran
