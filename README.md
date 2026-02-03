@@ -60,6 +60,7 @@ Pengguna dapat melihat dan memilih event sesuai kategori yang diinginkan.
 * **Frontend**: Blade Template, HTML, CSS, JavaScript
 * **Database**: MySQL
 * **Authentication**: Laravel Auth
+* **CSS Framework**:  Tailwind
 
 ## ⚙️ Alur Sistem Singkat
 
