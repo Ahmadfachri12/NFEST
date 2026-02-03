@@ -46,6 +46,7 @@ Pengguna dapat melihat dan memilih event sesuai kategori yang diinginkan.
 * Registrasi dan login akun
 * Melihat daftar event kampus
 * Melihat event berdasarkan kategori
+* Daftar event
 
 ### 🛠️ Admin
 
@@ -71,7 +72,7 @@ Pengguna dapat melihat dan memilih event sesuai kategori yang diinginkan.
 
 ## 📌 Catatan
 
-Project ini dibuat untuk keperluan akademik dan pengembangan keterampilan dalam bidang **manajemen proyek** dan **pengembangan web berbasis framework Laravel**.
+Project ini dibuat untuk keperluan akademik dan pengembangan keterampilan dalam mata kuliah **manajemen proyek**.
 
 ---
 
