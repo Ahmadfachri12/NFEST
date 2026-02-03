@@ -1,66 +1,77 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# NFEST – Campus Event Information System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+NFEST adalah sebuah website **informasi event kampus** yang dikembangkan dalam rangka memenuhi tugas mata kuliah **Manajemen Proyek**. Website ini bertujuan untuk memudahkan mahasiswa dan civitas akademika dalam memperoleh informasi event kampus secara terpusat dan terstruktur berdasarkan kategori.
 
-## About Laravel
+## 👥 Tim Pengembang
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Project ini dikembangkan oleh kelompok **Paprikahive**, yang terdiri dari 7 anggota dengan peran masing-masing:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. **Riani Apriyanti** – *Project Manager*
+   Bertanggung jawab atas perencanaan proyek, pengelolaan timeline, koordinasi tim, dan memastikan project berjalan sesuai tujuan.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+2. **Yossy Indra Kusuma** – *Scrum Master*
+   Mengelola proses pengembangan menggunakan pendekatan Scrum, memastikan kolaborasi tim berjalan efektif.
 
-## Learning Laravel
+3. **Dzakiah Nur Aini** – *Media Creative*
+   Bertanggung jawab pada pembuatan konten visual dan pendukung promosi NFEST.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+4. **Muhammad Zen Alby** – *Media Creative*
+   Membantu pengelolaan konten media dan aset kreatif untuk platform NFEST.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+5. **Ahmad Fachri** – *Backend Developer*
+   Mengembangkan sistem backend NFEST yang menangani **penyimpanan data event**, **autentikasi pengguna**, serta **integrasi fitur** agar platform berjalan secara efisien dan aman.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+6. **Muhammad Andhika Thata** – *UI/UX Designer*
+   Mendesain tampilan antarmuka NFEST agar **informatif, modern, dan mudah digunakan**, sehingga pengguna mendapatkan pengalaman terbaik saat menjelajahi event kampus.
 
-## Laravel Sponsors
+7. **Arrijal Abdul Kholiq** – *Frontend Developer*
+   Membangun bagian frontend NFEST yang **responsif dan interaktif**, menghubungkan desain dengan fungsionalitas agar dapat diakses optimal di berbagai perangkat.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🎯 Konsep & Tujuan
 
-### Premium Partners
+NFEST berfungsi sebagai **platform informasi event kampus**, di mana event disajikan berdasarkan kategori agar mudah diakses oleh pengguna.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Kategori Event:
 
-## Contributing
+* **ORMAWA** (Organisasi Mahasiswa)
+* **UKM** (Unit Kegiatan Mahasiswa)
+* **EKSTERNAL** (Event dari pihak luar kampus)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Pengguna dapat melihat dan memilih event sesuai kategori yang diinginkan.
 
-## Code of Conduct
+## ✨ Fitur Utama
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 👤 Pengguna
 
-## Security Vulnerabilities
+* Registrasi dan login akun
+* Melihat daftar event kampus
+* Melihat event berdasarkan kategori
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 🛠️ Admin
 
-## License
+* Login sebagai admin
+* **CRUD Event (Create, Read, Update, Delete)**
+* Event yang ditambahkan admin akan otomatis tampil di halaman event
+* Event yang dihapus admin akan otomatis hilang dari halaman event
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🗂️ Teknologi yang Digunakan
+
+* **Backend**: Laravel
+* **Frontend**: Blade Template, HTML, CSS, JavaScript
+* **Database**: MySQL
+* **Authentication**: Laravel Auth
+
+## ⚙️ Alur Sistem Singkat
+
+1. Pengguna melakukan registrasi dan login
+2. Pengguna mengakses halaman event dan memilih kategori
+3. Admin mengelola data event melalui dashboard admin
+4. Perubahan data event langsung tercermin di halaman event pengguna
+
+## 📌 Catatan
+
+Project ini dibuat untuk keperluan akademik dan pengembangan keterampilan dalam bidang **manajemen proyek** dan **pengembangan web berbasis framework Laravel**.
+
+---
+
+**NFEST – Paprikahive Team**
